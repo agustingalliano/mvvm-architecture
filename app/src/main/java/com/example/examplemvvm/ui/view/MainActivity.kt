@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         quoteViewModel.onCreate()
 
-        quoteViewModel.quoteModel.observe(this, Observer { currentQuote ->
+        quoteViewModel.quote.observe(this, Observer { currentQuote ->
             binding.textQuote.text = currentQuote.quote
             binding.textAuthor.text = currentQuote.author
         })
